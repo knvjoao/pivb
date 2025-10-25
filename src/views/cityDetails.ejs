@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Detalhes da Cidade</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <h1>Detalhes da Cidade</h1>
+  <p><strong>ID:</strong> <%= city.id %></p>
+  <p><strong>Nome:</strong> <%= city.name %></p>
+  <a href="/vaccination-points/<%= city.id %>">Ver Pontos de Vacinação</a><br>
+  <a href="/cities">Voltar</a>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cidades</title>
+  <meta charset="utf-8">
+  <style>
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td {
+      border: 2px solid blue;
+      padding: 4px; /* células menores */
+      text-align: left;
+      color: black;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    a {
+      text-decoration: none;
+      color: black; /* link preto */
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Alagoas</h1>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Detalhes</th>
+    </tr>
+    <% cities.forEach(city => { %>
+      <tr>
+        <td><%= city.id %></td>
+        <td><%= city.name %></td>
+        <td><a href="/cities/<%= city.id %>">Ver</a></td>
+      </tr>
+    <% }) %>
+  </table>
+</body>
+</html>

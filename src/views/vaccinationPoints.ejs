@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pontos de Vacinação</title>
+  <meta charset="utf-8">
+  <style>
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td {
+      border: 2px solid blue;
+      padding: 4px; /* células menores */
+      text-align: left;
+      color: black;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    a {
+      text-decoration: none;
+      color: black; /* link preto */
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Pontos de Vacinação</h1>
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Endereço</th>
+    </tr>
+    <% points.forEach(p => { %>
+      <tr>
+        <td><%= p.id %></td>
+        <td><%= p.name %></td>
+        <td><%= p.address %></td>
+      </tr>
+    <% }) %>
+  </table>
+
+  <br>
+  <a href="/cities">Voltar</a>
+</body>
+</html>
